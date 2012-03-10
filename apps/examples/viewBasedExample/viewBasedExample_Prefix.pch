@@ -1,0 +1,15 @@
+//
+// Prefix header for all source files of the 'viewBasedExample' target in the 'viewBasedExample' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+#ifdef DEBUG
+#define LOG(...) NSLog(__VA_ARGS__);
+#define LOG_METHOD NSLog(@"%s", __func__);
+#else
+#define LOG(...) ;
+#define LOG_METHOD ;
+#endif
